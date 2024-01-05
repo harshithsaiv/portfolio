@@ -1,0 +1,22 @@
+.skill-box {
+    background-color: rgba(255, 255, 255, 0.3); 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a box shadow for a subtle effect */
+    max-width: 300px; /* Adjust the width as needed */
+    margin: 20px; /* Adjust margin as needed */
+    max-height: 450px;
+  }
+  
+  .skill-box h2 {
+    text-align: center;
+  }
+  
+  .skill-box ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .skill-box li {
+    margin-bottom: 8px;
+  }

@@ -1,0 +1,22 @@
+.navbar {
+    background-color: black; 
+    display: flex;
+    flex-direction: row;
+     height: 100px;
+    justify-items: center;
+    justify-content: space-between; 
+  }
+  
+  .navbar-logo {
+    margin-right: 20px;
+  }
+  .logo{
+    height:100px;
+  }
+  
+  .navbarlinks{
+    color: aqua;
+    display:flex;
+    justify-content: center;
+  }
+

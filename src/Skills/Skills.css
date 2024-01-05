@@ -1,0 +1,38 @@
+.skills-container {
+    background-image: url('./background.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #444544; 
+    padding: 180px; 
+    color: #FFFF;
+    text-align: center;
+  }
+  
+  .skills-conent {
+    max-width: 800px;
+    color: white;
+    margin-top: 30px;
+  }
+
+  .SkillBox
+  {
+    padding: 60px;
+    display: flex;
+    
+  }
+  
+  h3 {
+    color: inherit;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    color: inherit;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    
+  }

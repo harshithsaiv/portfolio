@@ -7,18 +7,17 @@ const Home = () => {
       <div className="content">
         <h1>Welcome to My Portfolio</h1>
         <p>
-          Hello, I'm Harshith Sai, a developer. This is my portfolio where I showcase my projects and blogs.
+        🔒 Master's student, backend developer, cybersecurity enthusiast— Welcome to my world of digital fortitude. 
         </p>
         <p>
-          Explore my work and feel free to contact me for any inquiries or collaborations.
-          
+        I'm Harshith Sai, passionate about crafting resilient backend systems and safeguarding digital assets.
+        Let's build the future securely, one line of code at a time. 
         </p>
-        <a href="./">Download Resume</a>
-        <div>
-        <img src= "./hello_dev.png"  alt="dev" class="hello_dev"/>
+        <a href="./Resume.pdf" target="_blank" rel="noopener noreferrer" >Download Resume</a>
       </div>
+      <div className="round_image"> 
+        <img src= "./harshith.jpg"  alt="dev" class="harshith"/>
       </div>
-      
     </div>
   );
 };

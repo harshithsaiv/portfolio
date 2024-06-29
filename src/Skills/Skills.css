@@ -1,26 +1,63 @@
-.skills-container {
-    background-image: url('./background.jpg');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-color: #444544; 
-    padding: 180px; 
-    color: #FFFF;
-    text-align: center;
+@keyframes shootingStar {
+  0% {
+    top: -50px;
+    left: 100%;
+    opacity: 1;
+    transform: translateX(0) translateY(0) rotate(45deg);
   }
+  100% {
+    top: 100%;
+    left: -100px;
+    opacity: 0;
+    transform: translateX(-300px) translateY(300px) rotate(45deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .SkillBox {
+      flex-direction: column; /* Stacks the boxes vertically on small screens */
+      align-items: center; /* Centers boxes when stacked vertically */
+      padding: 20px;
+  }
+}
+
+.skills-container {
+  position: relative;
+  overflow: hidden; /* Keeps the stars within the bounds of the container */
+  background-image: url('./background.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #444544;
+  padding: 180px;
+  color: #FFFF;
+  text-align: center;
+}
+
+.skills-container::before, .skills-container::after {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: 100%;
+  width: 2px; /* Narrow part of the star */
+  height: 30px; /* Longer trail of the star */
+  background: linear-gradient(transparent, white, transparent); /* Gradient effect for fading */
+  box-shadow: 0 0 10px 5px white; /* Soft glow effect */
+  opacity: 0; /* Start fully transparent */
+  animation: shootingStar 6s linear infinite;
+  transform: rotate(45deg); /* Rotate the stars for a diagonal trail */
+}
+
+.skills-container::after {
+  animation-delay: 10s; /* Starts this shooting star 1 second after the first one */
+}
+
   
   .skills-conent {
     max-width: 800px;
     color: white;
     margin-top: 30px;
-  }
-
-  .SkillBox
-  {
-    padding: 60px;
-    display: flex;
-    
   }
   
   h3 {
@@ -36,3 +73,10 @@
     margin-bottom: 15px;
     
   }
+  
+.SkillBox {
+    display: flex;
+    justify-content: space-around; /* This will space your boxes evenly */
+    flex-wrap: wrap; /* This allows boxes to wrap in smaller screens */
+    padding: 60px;
+}

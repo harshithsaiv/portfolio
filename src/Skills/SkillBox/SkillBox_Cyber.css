@@ -1,4 +1,4 @@
-.skill-box {
+.skill-box-cyber {
   background-color: rgba(255, 255, 255, 0.3); 
   padding: 30px;
   border-radius: 10px;
@@ -8,24 +8,25 @@
   max-height: 450px;
 }
 
-.skill-box h2 {
+.skill-box-cyber h2 {
   text-align: center;
   margin-bottom: 10px; /* Ensures uniform spacing below the header */
 }
 
-.skill-box ul {
+.skill-box-cyber ul {
   list-style: none;
   padding: 0;
 }
 
-.skill-box li {
+.skill-box-cyber li {
   margin-bottom: 10px;
-  align-items: center;
+  align-items: center; /* Aligns the icon and text vertically */
   display: flex;
 }
 
-.skill-box svg {
-  margin-right: 10px;
-  width: 20px;
-  height: auto;
+.skill-box-cyber svg {
+  margin-right: 10px; /* Adds space between the icon and text */
+  width: 20px; /* Sets a fixed width for all icons */
+  height: auto; /* Maintains aspect ratio */
 }
+

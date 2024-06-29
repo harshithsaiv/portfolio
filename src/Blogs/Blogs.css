@@ -1,0 +1,18 @@
+.blog{ 
+
+    background-color: #a5a8ad;
+    display: flex;
+    justify-content: center;
+    color: #333;
+}
+
+
+.blog-heading
+{
+  font-family: "Playfair Display", serif;
+  font-size: 3.5em;
+  color: #2c4773;
+
+  margin: 0 auto;
+}
+

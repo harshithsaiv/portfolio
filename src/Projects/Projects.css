@@ -1,0 +1,44 @@
+.projects-container {
+    position: relative;
+    overflow: hidden; /* Keeps the stars within the bounds of the container */
+    background-color: black;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 180px;
+    color: #FFFF;
+    text-align: center;
+  }
+
+.projects-header {
+    color: #ccc; /* Lighter grey text for the header */
+    margin-bottom: 20px;
+}
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid layout */
+    gap: 20px; /* Space between boxes */
+    padding: 20px;
+  }
+  
+  .project-box {
+    background: white;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-decoration: none;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .project-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  }
+  

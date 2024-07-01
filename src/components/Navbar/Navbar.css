@@ -1,11 +1,17 @@
 .navbar {
-  background-color: black; 
+  position: fixed;  /* Fixes navbar at the top of the viewport */
+  top: 0;           /* Aligns the navbar at the top */
+  left: 0;          /* Aligns the navbar to the left */
+  right: 0;         /* Ensures the navbar stretches across the top */
+  background-color: black; /* Ensures the navbar background is not transparent */
+  z-index: 1000;    /* Keeps the navbar on top of other content */
   display: flex;
   flex-direction: row;
-  align-items: center; /* This ensures that children of navbar are vertically centered */
   height: 100px;
-  justify-content: space-between; /* This pushes logo to the left and links to the right */
-  padding: 0 20px; /* Adds padding on the left and right of the navbar */
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5); /* Optional: adds shadow for better visibility */
 }
 
 .navbar-logo, .logo {
@@ -20,4 +26,5 @@
   align-items: center; /* Aligns the links vertically center */
   gap: 20px; /* Adds space between links */
   font-size: 1.2rem; /* Adjust font size as needed */
+  cursor: pointer;
 }

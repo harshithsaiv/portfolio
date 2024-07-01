@@ -1,0 +1,143 @@
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 10px; /* Moves line to the left side */
+        transform: translateX(0);
+    }
+
+    .timeline-item {
+        justify-content: flex-start; /* Aligns all items on one side */
+    }
+
+    .timeline-content {
+        width: 80%; /* Makes boxes wider on smaller screens */
+    }
+}
+
+.timeline-content {
+    overflow: hidden; /* Ensures nothing spills out */
+    word-wrap: break-word; /* Ensures text breaks to avoid horizontal scrolling */
+}
+
+.experience-container {
+    width: 100%;
+    padding: 20px;
+    background-color: black;
+    color: #333;
+  }
+
+.experience-container h2{
+    color: #00BFFF;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;  /* Aligns items vertically by default */
+    align-items: center;     /* Centers items along the cross axis */
+    position: relative;
+    padding: 20px;
+    max-width: 1200px; /* Optional: Restrains the timeline width for very wide screens */
+    margin: 0 auto; /* Centers the timeline horizontally */
+}
+
+
+
+.timeline-content h3 {
+    font-size: 1.8rem; /* Adjust size as needed */
+    color: #00BFFF; /* Dark grey for better readability */
+    margin-bottom: 10px; /* Space between the title and the company/type */
+}
+.timeline-content h3 {
+    position: relative;
+    cursor: pointer; /* Changes the mouse cursor to indicate interactivity */
+    padding-bottom: 2px; /* Provides space for the underline */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.timeline-content h3:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px; /* Height of the underline */
+    background-color: #00BFFF; /* Choose a color that matches your design */
+    animation: underline 0.8s forwards; /* Animation for the underline */
+}
+
+@keyframes underline {
+    from { width: 0; }
+    to { width: 100%; }
+}
+.timeline-content h4 {
+    font-size: 1.2rem;
+    color: #666; /* Lighter grey to differentiate from the title */
+    margin-bottom: 10px; /* Space between the company/type and duration */
+}
+
+.timeline-content p {
+    font-size: 1rem;
+    color: #444; /* Medium grey for duration */
+    margin-bottom: 0; /* Remove bottom margin if not needed */
+}
+
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background-color: #00BFFF; /* Adjust color as necessary */
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    width: 100%; /* Full width to center content */
+    display: flex;
+    justify-content: flex-end; /* Aligns content to the right or left alternatively */
+    margin: 10px 0;
+}
+
+.timeline-item:nth-child(odd) {
+    justify-content: flex-end; /* Right side on odd items */
+}
+
+.timeline-item:nth-child(even) {
+    justify-content: flex-start; /* Left side on even items */
+}
+
+.timeline-content {
+    width: 40%; /* Adjust based on preference */
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+
+/* Adjustment for content connectors */
+.timeline-content::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #00BFFF;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px #FFFFFF;
+}
+
+.timeline-item:nth-child(odd) .timeline-content::before {
+    right: -15px;
+    top: 20px;
+    transform: translate(50%, -40%);
+}
+
+.timeline-item:nth-child(even) .timeline-content::before {
+    left: -32px;
+    top: 20px;
+    transform: translate(-50%, -50%);
+}
